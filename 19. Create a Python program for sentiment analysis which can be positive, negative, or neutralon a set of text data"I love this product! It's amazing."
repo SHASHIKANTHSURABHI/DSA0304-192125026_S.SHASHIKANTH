@@ -1,0 +1,12 @@
+from textblob import TextBlob
+text_data = "I love this product! It's amazing."
+blob = TextBlob(text_data)
+polarity = blob.sentiment.polarity
+if polarity > 0:
+    sentiment = "Positive"
+elif polarity < 0:
+    sentiment = "Negative"
+else:
+    sentiment = "Neutral"
+print(f"Text Data: '{text_data}'")
+print(f"Sentiment: {sentiment}")
